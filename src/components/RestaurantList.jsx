@@ -11,7 +11,7 @@ const RestaurantList = () => {
         const { data } = await axios.get(API_URL)
         console.log(data.data.cards)
         setResData(
-          data.data.cards[3].card.card.gridElements.infoWithStyle.restaurants
+          data.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
         )
       } catch (error) {
         console.log(error)
@@ -22,6 +22,8 @@ const RestaurantList = () => {
   if (resData.length === 0) {
     return (
       <div className='flex flex-wrap'>
+        <Shimmer />
+        <Shimmer />
         <Shimmer />
         <Shimmer />
         <Shimmer />
