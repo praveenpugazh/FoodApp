@@ -2,7 +2,7 @@ import logo from '../assets/logo.png'
 import { Link } from 'react-router-dom'
 const Header = () => {
   return (
-    <div className='flex w-full justify-between h-16 items-center mb-10'>
+    <div className='flex justify-between h-16 items-center mb-10 md:flex lg:flex'>
       <div className='logo w-3/12 flex items-center'>
         <img src={logo} alt='company logo' width='100px' />
         <h2 className='cursor-pointer'>Food App</h2>

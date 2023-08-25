@@ -2,18 +2,16 @@ import axios from 'axios'
 import RestaurantCard from './RestaurantCard'
 import { useEffect, useState } from 'react'
 import { API_URL } from '../utils/contants'
-
+import Shimmer from './Shimmer'
 const RestaurantList = () => {
   const [resData, setResData] = useState([])
   useEffect(() => {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(API_URL)
-        console.log(
-          data.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
-        )
+        console.log(data.data.cards)
         setResData(
-          data.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+          data.data.cards[3].card.card.gridElements.infoWithStyle.restaurants
         )
       } catch (error) {
         console.log(error)
@@ -22,7 +20,16 @@ const RestaurantList = () => {
     fetchData()
   }, [])
   if (resData.length === 0) {
-    return <h1>loading...</h1>
+    return (
+      <div className='flex flex-wrap'>
+        <Shimmer />
+        <Shimmer />
+        <Shimmer />
+        <Shimmer />
+        <Shimmer />
+        <Shimmer />
+      </div>
+    )
   }
 
   return (

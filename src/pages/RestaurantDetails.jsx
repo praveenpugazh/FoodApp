@@ -10,12 +10,9 @@ const RestaurantDetails = () => {
   useEffect(() => {
     const getResMenu = async () => {
       const { data } = await axios.get(RES_URL + id)
-      console.log(
-        data.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[3].card.card
-          .itemCards
-      )
+      console.log(data.data)
       setResMenu(
-        data.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[3].card.card
+        data.data.cards[3].groupedCard.cardGroupMap.REGULAR.cards[3].card.card
           .itemCards
       )
     }
@@ -26,7 +23,6 @@ const RestaurantDetails = () => {
   if (resMenu === null) {
     return <h1>loading....</h1>
   }
-  console.log(resMenu)
 
   return (
     <div className=''>
