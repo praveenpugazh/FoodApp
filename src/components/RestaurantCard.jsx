@@ -8,9 +8,6 @@ const RestaurantCard = ({ resData }) => {
     // eslint-disable-next-line react/prop-types
     resData?.info
 
-  // const IMG_URL =
-  //   'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/'
-
   return (
     <Link to={`res/${id}`}>
       <div className='mr-4 mb-8 h-96 w-60 shadow-md hover:shadow-lg cursor-pointer rounded-md'>

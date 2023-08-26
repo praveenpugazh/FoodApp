@@ -18,6 +18,9 @@ const Header = () => {
           <Link to='/contact'>
             <li className='cursor-pointer'>Contact</li>
           </Link>
+          <Link to='/grocery'>
+            <li className='cursor-pointer'>Grocery</li>
+          </Link>
           <li className='cursor-pointer'>Cart</li>
         </ul>
       </div>
