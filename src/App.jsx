@@ -25,6 +25,7 @@ function App() {
             </Suspense>
           }
         />
+        ``
         <Route
           path='/about'
           element={
