@@ -9,7 +9,7 @@ const RestaurantList = () => {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(API_URL)
-        console.log(data.data.cards)
+
         setResData(
           data.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
         )

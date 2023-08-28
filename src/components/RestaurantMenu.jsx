@@ -7,13 +7,16 @@ const RestaurantMenu = ({ menu }) => {
   const { title } = menu.card.card
   const [show, setShow] = useState(false)
 
-  console.log(menu.card.card)
+  console.log(menu)
 
   return (
     <>
       {menu.card.card?.itemCards && (
-        <div className='bg-gray-100 mb-4' onClick={() => setShow(!show)}>
-          <h2 className='font-bold mb-2 h-20'>
+        <div className='bg-gray-100 mb-4'>
+          <h2
+            className='font-bold mb-2 h-16 cursor-pointer'
+            onClick={() => setShow(!show)}
+          >
             {title}
             <span className='ml-2'>⮟</span>
           </h2>

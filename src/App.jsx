@@ -9,7 +9,7 @@ import { lazy, Suspense } from 'react'
 const Grocery = lazy(() => import('./pages/Grocery'))
 const About = lazy(() => import('./pages/About'))
 const Contact = lazy(() => import('./pages/Contact'))
-
+const Cart = lazy(() => import('./pages/Cart'))
 function App() {
   return (
     <>
@@ -39,6 +39,14 @@ function App() {
           element={
             <Suspense fallback={Shimmer}>
               <Grocery />
+            </Suspense>
+          }
+        />
+        <Route
+          path='/cart'
+          element={
+            <Suspense fallback={Shimmer}>
+              <Cart />
             </Suspense>
           }
         />

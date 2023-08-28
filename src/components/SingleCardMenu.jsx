@@ -1,9 +1,17 @@
 import { IMG_URL } from '../utils/contants'
-
+import { useDispatch } from 'react-redux'
+import { addItem } from '../slices/cartSlice'
 // eslint-disable-next-line react/prop-types
 const SingleCardMenu = ({ value, show }) => {
+  const dispatch = useDispatch()
   const { imageId, description, finalPrice, price, isVeg, name } =
     value.card.info
+  console.log(value)
+
+  const handleAddItems = (value) => {
+    dispatch(addItem(value))
+    console.log(value, 'add clicked')
+  }
 
   return (
     <>
@@ -17,7 +25,10 @@ const SingleCardMenu = ({ value, show }) => {
             <p className='text-slate-400'>{isVeg ? '🟢' : '🔴'}</p>
           </div>
           <div className='absolute'>
-            <button className='bg-gray-800 text-slate-50 rounded-md'>
+            <button
+              className='bg-gray-800 text-slate-50 rounded-md'
+              onClick={() => handleAddItems(value)}
+            >
               Add +
             </button>
           </div>
