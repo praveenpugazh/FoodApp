@@ -14,7 +14,7 @@ const RestaurantMenu = ({ menu }) => {
       {menu.card.card?.itemCards && (
         <div className='bg-gray-100 mb-4'>
           <h2
-            className='font-bold mb-2 h-16 cursor-pointer'
+            className='font-bold mb-2 h-16 cursor-pointer p-2'
             onClick={() => setShow(!show)}
           >
             {title}
