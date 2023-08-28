@@ -11,7 +11,7 @@ const RestaurantList = () => {
         const { data } = await axios.get(API_URL)
         console.log(data.data.cards)
         setResData(
-          data.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+          data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
         )
       } catch (error) {
         console.log(error)

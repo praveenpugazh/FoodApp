@@ -21,7 +21,7 @@ const RestaurantDetails = () => {
     return <h1>loading....</h1>
   }
   return (
-    <div className='w-9/12 m-auto'>
+    <div className='w-6/12 m-auto'>
       <h1 className='font-bold text-xl mb-5'>Restaurant Menu</h1>
       {resMenu.map((menu, index) =>
         menu?.card?.card?.title && menu?.card?.card?.title != 'Top Picks' ? (
