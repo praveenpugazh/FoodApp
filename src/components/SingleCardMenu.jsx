@@ -8,7 +8,7 @@ const SingleCardMenu = ({ value, show }) => {
   return (
     <>
       {show && (
-        <div className='mr-4 mb-4 h-20 shadow-md hover:shadow-xl flex'>
+        <div className='mr-4 mb-4 hover:shadow-xl flex'>
           <img src={IMG_URL + imageId} alt='food image' width='100px' />
           <div className='ml-4'>
             <p className=''>{name}</p>
@@ -17,7 +17,9 @@ const SingleCardMenu = ({ value, show }) => {
             <p className='text-slate-400'>{isVeg ? '🟢' : '🔴'}</p>
           </div>
           <div className='absolute'>
-            <button className='bg-gray-800 text-slate-50'>Add +</button>
+            <button className='bg-gray-800 text-slate-50 rounded-md'>
+              Add +
+            </button>
           </div>
         </div>
       )}
